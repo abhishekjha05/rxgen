@@ -2,15 +2,26 @@ import React from 'react';
 import { usePrescription } from '../../context/PrescriptionContext';
 
 export default function PrescriptionFooter() {
-  const { clinicInfo } = usePrescription();
+  const { clinicInfo, signatureImage } = usePrescription();
 
   return (
     <footer className="mt-auto p-8 pt-4">
       <div className="flex justify-end">
         <div className="text-center">
-          <div className="h-16 w-48 border-b-2 border-slate-300 mb-2"></div>
-          <p className="font-bold text-slate-800">{clinicInfo.doctorName}</p>
-          <p className="text-xs text-slate-500">Signature / Seal</p>
+          {signatureImage ? (
+            <>
+              <div className="h-20 w-48 mb-2 flex items-center justify-center border-b-2 border-slate-300">
+                <img src={signatureImage} alt="Signature" className="h-full object-contain" />
+              </div>
+              <p className="text-xs text-slate-500 mt-1">Digital Signature</p>
+            </>
+          ) : (
+            <>
+              <div className="h-16 w-48 border-b-2 border-slate-300 mb-2"></div>
+              <p className="font-bold text-slate-800">{clinicInfo.doctorName}</p>
+              <p className="text-xs text-slate-500">Signature / Seal</p>
+            </>
+          )}
         </div>
       </div>
       <div className="mt-8 text-center text-xs text-slate-400 border-t border-slate-100 pt-4">

@@ -6,6 +6,8 @@ import VitalsForm from './forms/VitalsForm';
 import ClinicalNotesForm from './forms/ClinicalNotesForm';
 import MedicationsForm from './forms/MedicationsForm';
 import AdviceForm from './forms/AdviceForm';
+import SignatureUpload from './forms/SignatureUpload';
+import HandwritingFontSelector from './forms/HandwritingFontSelector';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { usePrescription } from '../context/PrescriptionContext';
 
@@ -36,6 +38,8 @@ export default function Sidebar() {
         <ClinicalNotesForm />
         <MedicationsForm />
         <AdviceForm />
+        <SignatureUpload />
+        <HandwritingFontSelector />
 
         {/* Action Buttons */}
         <div className="space-y-3 pt-4 pb-8 border-t border-slate-200">

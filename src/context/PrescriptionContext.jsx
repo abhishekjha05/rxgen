@@ -42,6 +42,8 @@ export const PrescriptionProvider = ({ children }) => {
     { id: 3, name: 'Syp. Ascoril LS', dosage: '10ml', frequency: '1-0-1', duration: '5 Days', instructions: 'For cough' }
   ]);
   const [advice, setAdvice] = useState('Drink plenty of warm fluids (Gunguna pani).\nRest for 2 days.\nReview after 3 days if symptoms persist.');
+  const [signatureImage, setSignatureImage] = useState(null);
+  const [handwritingFont, setHandwritingFont] = useState('caveat');
 
   const addMedication = () => {
     setMedications([...medications, { id: Date.now(), name: '', dosage: '', frequency: '', duration: '', instructions: '' }]);
@@ -62,6 +64,7 @@ export const PrescriptionProvider = ({ children }) => {
     setClinicalNotes(initialClinicalNotes);
     setMedications([]);
     setAdvice('');
+    setSignatureImage(null);
   };
 
   const value = {
@@ -71,6 +74,8 @@ export const PrescriptionProvider = ({ children }) => {
     clinicalNotes, setClinicalNotes,
     medications, addMedication, removeMedication, updateMedication,
     advice, setAdvice,
+    signatureImage, setSignatureImage,
+    handwritingFont, setHandwritingFont,
     clearPrescription,
   };
 

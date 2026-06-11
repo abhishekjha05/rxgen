@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Kalam:wght@300;400;700&family=Indie+Flower&family=Satisfy&family=Great+Vibes&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,4 +16,54 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+}
+
+/* Handwriting Font Styles */
+.handwriting-text {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+.caveat-font {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+.kalam-font {
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.indie-font {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 400;
+  font-size: 1.02em;
+}
+
+.satisfy-font {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+}
+
+.greatvibes-font {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 0.8px;
+}
+
+@media print {
+  .caveat-font,
+  .kalam-font,
+  .indie-font,
+  .satisfy-font,
+  .greatvibes-font {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
